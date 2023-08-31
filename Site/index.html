@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
+    <!-- ou -->
+    <link rel="stylesheet"
+    href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <title>Fones de Ouvido</title>
+</head>
+<body>
+
+    <header class="black-header">
+        <a href="#" class="logo"><i class='bx bx-headphone'></i>Lojinha</a>
+
+        <ul class="navegação">
+            <li><a href="#">Visão Geral</a></li>
+            <li><a href="#">Especificações Técnicas</a></li>
+            <li><a href="#">Avaliações</a></li>
+            <li><a href="#">Contate-nos</a></li>
+        </ul><!--navegação-->
+
+        <div class="header-icons">
+            <i class='bx bx-cart'></i>
+            <div id="menu"><i class='bx bx-menu'></i></div>
+        </div><!--header-icons-->
+
+        <button>
+            <div class="svg-wrapper-1">
+              <div class="svg-wrapper">
+                <svg height="24" width="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M0 0h24v24H0z" fill="none"></path>
+                  <path d="M1.946 9.315c-.522-.174-.527-.455.01-.634l19.087-6.362c.529-.176.832.12.684.638l-5.454 19.086c-.15.529-.455.547-.679.045L12 14l6-8-8 6-8.054-2.685z" fill="currentColor"></path>
+                </svg>
+              </div>
+            </div>
+            <span>Suporte</span>
+          </button>
+
+    </header>
+
+    <section class="home">
+        <div class="home-img">
+            <img src="product1.png" class="one">
+        </div><!--home-img-->
+
+        <div class="home-text">
+
+            <h1>Wireless Headphones</h1>
+            <h5>A forma mais inteligente de ouvir</h5>
+            <h3>R$199,00</h3>
+            <div data-tooltip="Price:-R$199" class="button">
+                <div class="button-wrapper">
+                  <div class="text">Comprar aqui</div>
+                    <span class="icon">
+                      <svg viewBox="0 0 16 16" class="bi bi-cart2" fill="currentColor" height="16" width="16" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M0 2.5A.5.5 0 0 1 .5 2H2a.5.5 0 0 1 .485.379L2.89 4H14.5a.5.5 0 0 1 .485.621l-1.5 6A.5.5 0 0 1 13 11H4a.5.5 0 0 1-.485-.379L1.61 3H.5a.5.5 0 0 1-.5-.5zM3.14 5l1.25 5h8.22l1.25-5H3.14zM5 13a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm-2 1a2 2 0 1 1 4 0 2 2 0 0 1-4 0zm9-1a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm-2 1a2 2 0 1 1 4 0 2 2 0 0 1-4 0z"></path>
+                </svg>
+                    </span>
+                  </div>
+                </div>
+                            
+        </div>
+        
+          
+
+    </section>
+    <div class="main">
+        <div class="row">
+            <li><img src="main1.png" onclick="slider('product1.png')"></li>
+        </div><!--row-->
+
+        <div class="row2">
+            <li><img src="main2.png" onclick="slider('product2.png')"></li>
+        </div><!--row2-->
+
+        <div class="row3">
+            <li><img src="main3.png" onclick="slider('product3.png')"></li>
+        </div><!--row3-->
+    </div><!--main-->
+ 
+    <script>
+        function slider(anything){
+            document.querySelector('.one').src = anything;
+        };
+
+       let menu = document.querySelector('#menu-icon');
+       let navbar = document.querySelector('.navegação');
+
+       menu.onclick = () => {
+        menu.classList.toggle('bx-x');
+        navbar.classList.toggle('aberto');
+       }
+    </script>
+
+    
+    <footer class="black-footer">
+        <p>&copy: Site </p>
+        <div class="rating">
+            <input value="5" name="rating" id="star5" type="radio">
+            <label for="star5"></label>
+            <input value="4" name="rating" id="star4" type="radio">
+            <label for="star4"></label>
+            <input value="3" name="rating" id="star3" type="radio">
+            <label for="star3"></label>
+            <input value="2" name="rating" id="star2" type="radio">
+            <label for="star2"></label>
+            <input value="1" name="rating" id="star1" type="radio">
+            <label for="star1"></label>
+          </div>
+                
+    </footer>
+    
+</body>
+
+</html>
